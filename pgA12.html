@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="girl2v.css" />
+<title>Faqja e Dytë</title>
+<style>
+    h3 {
+        text-align: center;
+        color: blue;
+        font-family: Arial, sans-serif;
+    }
+    .image {
+        width: 200px;
+        height: 300px;
+        object-fit:cover;
+        border-radius: 10px;
+        margin: 15px;
+     box-shadow:0px 4px 8px rgba(255,0,128,0.6);
+    }
+    h4 {
+        text-align: left;
+        color: black;
+        font-family: Arial, sans-serif;
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <!-- Imazhi i logos -->
+        <img src="foto20.jpg" alt="Logo e faqes">
+        <!-- Teksti i logos -->
+        <h1>Welcome to our fantastic world for your girls</h1>
+    </div>
+</header>
+
+<form action="">
+    <h3>Ju ftojmë të shihni faqen e ideve të veçanta!</h3>
+    <h4>Shkruani emrin e fëmijës ose çfarë ju dëshironi t’i shkruani te personalizimi:</h4>
+    Detaje: <input type="text" name="Detaje"><br>
+    <h4>Por ky produkt shkon te fëmijët si dhuratë për ditëlindje. Ju lutem, shkruani datën e lindjes nëse dëshironi:</h4>
+    Data e lindjes: <input type="number" name="Data e lindjes"><br>
+    <h4>A është kjo një dhuratë për festat e fundvitit?</h4>
+    <input type="radio" name="konfirmim" value="Po"> Po<br>
+    <input type="radio" name="konfirmim" value="Jo"> Jo<br>
+    <h4>Nëse po, ne do ju ofrojmë një dhuratë simbolike për festat e fundvitit.</h4>
+    <h4>Më poshtë mund të zgjidhni dëshirën tuaj të personalizimit:</h4>
+    <input type="checkbox" name="ide" value="personalizim_thjesht"> Dëshiroj personalizim të thjeshtë.<br>
+    <input type="checkbox" name="ide" value="personalizim_ditelindje"> Dëshiroj personalizim për ditëlindje.<br>
+    <input type="checkbox" name="ide" value="personalizim_festave"> Dëshiroj personalizim rreth festave të fundvitit.<br>
+    <input type="Button" onclick = "shfaq_alert()" value="Konfirmo"/>
+    <script>
+    function shfaq_alert()
+{
+alert("Konfirmimi u krye!");
+}
+</script>
+    <h4>Më poshtë do të gjeni disa foto të produkteve të personalizuara:</h4>
+    <fieldset>
+        <legend>Disa produkte të personalizuara</legend> 
+        <img class="image" src="fotop1.jpg" alt="Foto e produktit për vajza">
+        <img class="image" src="fotop2.jpg" alt="Foto e produktit për vajza 1">
+        <img class="image" src="fotop3.jpg" alt="Foto e produktit për vajza 2">
+        <img class="image" src="fotop4.jpg" alt="Foto e produktit për vajza 3">
+        <img class="image" src="fotop5.jpg" alt="Foto e produktit për vajza 4">
+    </fieldset>
+</form>
+<footer style="text-align: center; padding: 20px; background-color: #f1f1f1;">
+    <div class="footer-logo">
+        <img src="foto30.jpg" alt="Logo e Footerit" style="max-height: 80px;">
+    </div>
+</footer>
+
+</body>
+</html>

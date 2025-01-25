@@ -1,0 +1,362 @@
+* {/*selectori universal perdoret per te perfshire te gjithe elementet ne faqen html*/
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;   /*përcakton mënyrën se si llogariten përmasat e elementeve (gjerësia dhe lartësia), duke përfshirë ose përjashtuar padding dhe border
+                              *width: 200px;  Përmbajtja + padding + border = 200px */
+
+}
+header{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: #ef32d9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: auto;
+padding: 48px;
+width: 100%;
+}
+.container{
+    width: 95%;/*95% eshte e pershtatshme per ekranet me te vogla*/
+    max-width: 1200px;
+    display: flex;/*aktovizon flexbox i cili mundeson orgazinizm me te lehte te permasave dhe pozicionimit te elementeve ne nje rresht ose kolone*/
+    align-items: center;
+    margin: auto;
+    justify-content: space-around;/*siguron qe elemente te jene te shperndare ne menyre te barabarte*/
+}
+
+.imazhkryesor{
+    display: block;/*perdoret per te mbushur te gjithe hapesiren horizontale dhe te mund te vendosim gjeresi dhe lartesi te percaktuar*/
+    height: 500px;
+    width: auto;
+    object-fit: cover;/* imazhi të mbushë plotësisht hapësirën e elementit, ndërsa ruan raportin e tij të aspektit (p.sh. nëse një imazh është 16:9, ai do të ruajë këtë raport, por mund të pritet pjesa që del jashtë)*/
+    animation: levizImazh 1s ease-in;/*nis ngadale dhe behet me i shpejte*/
+position: relative;
+left: 150px;
+border-radius: 50%;
+}
+.titulli{
+    width: 50%;
+    color: #fff;
+}
+.titulli h1{
+    font-size: 80px;
+    animation:levizText 1s ease-in;
+    
+}
+.titulli h2{
+    font-size: 30px;
+    animation: levizMenu 1s ease-in;
+}
+.titulli a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+    animation: levizImazh 1s ease-in;
+}
+.wave{
+    height: 100px;
+    width: 100%;
+    background: #ef32d9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+    
+@keyframes levizMenu{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes levizText{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes levizImazh{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;  
+        align-items: center;
+    }
+    .titulli h1 {
+        font-size: 50px;  
+    }
+    .titulli h2 {
+        font-size: 20px;
+    }
+    img {
+        width: 100%;  
+        height: auto;
+    }
+}
+.seksioni1{ padding-block: 45px;
+
+      font-family: "Nunito", serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      padding-top:70px;
+      padding-bottom: 40px;
+}
+
+.elementet {
+  display: flex;
+  flex-wrap: wrap;/*mundeson vendosjen e elementeve ne rreshta dhe kolona kur nuk ka hapesire te mjaftueshme,nuk e kalojne hapesiren e disponueshme*/
+  justify-content: center;/*elementet ne qender me hapesire te njejte ne te dyja anet e kontejnerit*/
+  align-items: center;
+  gap: 40px;
+}
+
+.elementetSherbimit {
+  max-width: 235px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;/*i vendos elementet ne fillim te kontejnerit*/
+  align-items: center;
+  gap: 20px;
+}
+
+.ikona { width: 45px; }
+
+.ikona img { margin-inline: auto; /*i pozicionon ikona ne qender te elementit*/
+width: 45px;
+height: 45px;
+left: 5px;}
+
+.emri {
+    color: #1b1b1b;       
+    font-size: 16px;    
+    font-weight: 600;
+}
+.pershkrimi{
+    font-size: 12px;
+}
+.categories{
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-style: normal;
+        font-size:x-large;
+        
+        color:#85c5fd;
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      
+}
+.majtas img{
+display: flex;
+flex-direction: column;/*pozicioni vertikal*/
+justify-content: space-between;
+gap: 20px;/*hapesira ndermjet fotove*/
+height: 40vh;
+width: 37vw;
+margin-left: 130px;
+
+}
+.djathtas img{
+    margin-left: 60px;  
+    height: 87vh;
+    width: 45vw;
+   
+}
+.fotoKategori{
+    display: flex;/*përdoret për të krijuar një sistem fleksibël për disponimin e elementeve brenda një kontejneri*/
+    
+}
+.majtas button{
+    position: relative;
+    left: 50%;
+    right: 50%;
+    bottom: 70px;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color:rgb(245, 177, 240) ;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: aliceblue;
+}
+.majtas a{
+    text-decoration: none;
+    color:rgb(193, 89, 222) ;
+}
+.djathtas button{
+    position: relative;
+    left: 40%;
+    bottom: 80px;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color:rgb(245, 177, 240) ;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: aliceblue;
+    
+}
+.djathtas a{
+    text-decoration: none;
+    color: rgb(193, 89, 222) ;
+}
+.fotoKategori img:hover{
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 30px rgba(16, 13, 13, 0.655);
+
+}
+
+.title{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+   
+}
+.title h1{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;/*perdoret kur punojme me fonte qe kane madhesi te shumta optike,dhe kjo cilesi lejon shfletusin te vendose madhesine optike te pershtatshme*/
+    font-weight: 700;
+    font-size: 50px;
+    font-style: normal; 
+    text-transform:uppercase;
+}
+.title p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-left: 70px;
+    margin-bottom: 70px;;
+    max-width: 600px;
+    color: #333;
+}
+.video{
+    max-width: 100%; /* Përdorim 100% për të siguruar që video të zërë hapësirën e duhur */
+    height: auto; /* Lejon që video të ruajë përmasat e duhura */
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    margin: 40px auto; /* Pozicionim në qendër të faqeve me hapësirë të mjaftueshme rreth videos */
+}
+.RrethNesh{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.seksioniFundit{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    background-color: rgb(211, 211, 211);
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    margin-left: 30px;
+    width:30%;
+}
+.social div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.rrjetet p{
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.social img{
+    width: 50px;
+    height: 50px;
+}
+.social h3{
+    padding-left: 25%;
+    font-size: 30px;
+    margin-bottom: 20px;
+   margin-top: 20px;
+   font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.adresa{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.adresa p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+   margin-top: 20px;
+   font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.mesazh{
+    display: flex;
+    flex-direction: column;
+}
+.mesazh textarea{
+    width:70%;
+    margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    border: 3px;
+    box-shadow:  5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.mesazh label{
+    margin-left: 15%;
+    font-size:20px;
+}
+.mesazh button{
+    width: 20%;
+    margin-left: 51%;
+    color: #323131e5;
+    font-weight: 300;
+    border: 1px solid #515151fd;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+}
+.contact{
+
+    width: 30%;
+}
+.contact h3{
+ text-align: center;
+ font-size: 30px;
+ margin-bottom: 20px;
+ margin-top: 20px;
+ font-family: "Barlow", serif;
+font-weight: 400;
+font-style: normal;  
+}  

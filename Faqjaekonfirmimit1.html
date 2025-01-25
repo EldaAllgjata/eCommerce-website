@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Faqja e Konfirmimit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            text-align: center;
+            background-color: #f8f4f1; 
+            color: #4f4f4f; 
+        }
+        .Fotoproduktit {
+            width: 200px;
+            height: auto;
+            box-shadow: 0px 4px 8px rgba(255, 182, 193, 0.5); 
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1, h3 {
+            color: #d29a9a;
+        }
+        input[type="radio"] {
+            margin: 5px;
+        }
+        button {
+            background-color: #d29a9a; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #e0a7a7; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Faqja e konfirmimit të produktit</h1>
+    <img class="Fotoproduktit" src="fotot.jpg" alt="Foto e produktit 1">
+    <h3>A është produkti sipër ai që keni zgjedhur?</h3>
+    <input type="radio" name="produkti" value="Po"> Po<br>
+    <input type="radio" name="produkti" value="Jo"> Jo<br>
+
+    <h3>Konfirmoni masën:</h3>
+    <input type="radio" name="produkti1" value="Po"> Po<br>
+    <input type="radio" name="produkti1" value="Jo"> Jo<br>
+
+    <h3>Konfirmoni ngjyrën në qoftë se është ajo në foto:</h3>
+    <input type="radio" name="produkti2" value="Po"> Po<br>
+    <input type="radio" name="produkti2" value="Jo"> Jo<br>
+
+    <h1>Konfirmimi i veprimeve</h1>
+    <form onsubmit="return konfirmo()">
+        <button type="submit">Konfirmo porosinë</button>
+    </form>
+
+    <script>
+        function konfirmo() {
+            let pergjigje = confirm("A e konfirmoni porosinë?");
+            if (pergjigje) {
+                alert("Porosia është konfirmuar. Faleminderit!");
+                return true;
+            } else {
+                alert("Porosia nuk u konfirmua.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

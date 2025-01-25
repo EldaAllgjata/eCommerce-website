@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Fustan-me-xixa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+       body {
+            font-family: 'Poppins', sans-serif;     /*Teksti në faqe do të shfaqet me fontin "Poppins", dhe nëse ky font nuk është i disponueshëm, shfletuesi do të përdorë një font rezervë sans-serif.*/
+            align-items: center; 
+            background-color: white;
+            display: flex;                /*Të gjithë elementët e body do të sillen sipas rregullave të Flexbox.*/
+            flex-direction: column;       /*Elementet fëmijë të body do të shfaqen vertikalisht njëri pas tjetrit.*/
+        }
+
+
+        .pjesaLogos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;       /*Elementi i parë është i vendosur në fillim. Elementi i fundit është i vendosur në fund.*/
+            padding: 10px 20px;                   /*10px hapësira për sipër dhe poshtë elementit. 20px për majtas dhe djathtas të elementit.*/
+            background-color: pink;
+            width: 100%;
+        }
+        .pjesaLogos img {
+            height: 100px;
+            width: 120px;
+            border-radius: 50%;              /*këndet e rrumbullakosura*/
+        }
+        .pjesaLogos a {
+            margin: 0 10px;                  /*Hapësirë mes elementëve në fund*/
+            :hover {                         /* mouse over link */
+            color: white;
+        }
+        }
+        
+        .pjesaLogos p {
+            display: inline-block;          /*Elementët shfaqen në të njëjtën rresht*/
+            font-weight: bold; 
+            color: black;
+        }
+
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: hotpink;
+}
+
+a:hover {
+  color: pink;
+}
+
+a:active {
+  color: blue;
+}
+
+
+       table {
+            width: 100%;          /* Tabela do të zgjerohet për të mbushur hapësirën horizontale.*/
+    
+        }
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+        td img {
+            object-fit: cover;
+        }
+
+        img.small {
+            width: 100%;                 /* Përdor përmasat që janë të përshtatshme për kontejnerin */
+            height: 190px;               /* Lartësia e dëshiruar */
+            object-fit: cover;           /* Bën që fotoja të mbulojë hapësirën pa deformuar */
+            object-position: center;     /* Poziciono foton në qendër nëse ka hapësirë të mbetur */
+        }
+
+        td img.middle {
+            float: right;
+            width: 800px;
+            height: 700px;
+        }
+
+        td.cmim {
+            font-size: 30px;
+        } 
+
+       td.highlight {
+            font-weight: bold;
+            font-size:50px;
+            text-align:center;
+        }
+        td.shkrimet{
+            text-align:center;
+            font-size: 32px;
+        }
+
+
+
+        form {
+            float: center;
+        }
+
+        select {
+           width: 100%;
+           padding: 25px 25px;
+           border-radius: 4px;
+           background-color: pink;
+           font-size: 20px;
+        }
+   
+
+
+
+        hr {
+            margin: 10px;                      /* Hapësirë lart dhe poshtë */
+            border: none;                      /* Hiq çdo bordurë të mëparshme */
+            border-top: 2px solid #ccc;        /* Trashësi 2px, i vazhdueshëm, ngjyrë gri e lehtë me hexadecimal */
+            width: 100%;                       /* Siguro që shtrihet në të gjithë gjerësinë */
+        }
+    
+   
+   .ulje {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        background-color: #fff4f4;
+        border: 2px solid #ff6666;
+        border-radius: 8px;
+    }
+
+    .ulje legend {
+        font-size: 45px;
+        font-weight: bold;
+        color: #ff3366;
+    }
+
+    .ulje #countdown {
+        font-size: 35px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 10px;
+    }
+
+        /* Stilizimi i drejtkëndëshit dhe butonit */
+        .buy-button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(shume.jpeg) no-repeat center fixed;
+            background-size: cover;
+            width: 900px;
+            height: 150px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+@keyframes pulse {
+    0% { transform: scale(1); }                  /*0% → Në fillim, elementi është në madhësinë e tij normale.*/
+    50% { transform: scale(1.1); }               /*50% → Në gjysmën e kohës së animacionit, butoni zmadhohet me 10% (scale(1.1)).*/
+    100% { transform: scale(1); }                /*100% → Në fund, butoni kthehet në madhësinë e tij normale (scale(1)).*/  
+}
+
+        .buy-button-container a {
+            text-decoration: none;
+            color: white;
+            font-size: 60px;
+            line-height: 60px; /* Për ta qendruar vertikalisht */
+            font-weight: bold;
+            animation: pulse 1.5s infinite;            /* Ky cikël përsëritet pafundësisht për shkak të opsionit infinite. */
+        }
+
+        .buy-button-container a:hover {
+            color: hotpink;
+            border-radius: 30px;
+            background-color: black;
+        }       
+        
+       .links2 {
+            display: flex;                        /* Aktivizon Flexbox */
+            justify-content: space-between;       /* Siguron distancë të barabartë mes elementeve */
+            width: 100%;                          /* Përcakton gjerësinë */
+            margin: 10px 0;                       /* Ka pak hapësirë nga e larta dhe e poshtme */
+        }
+        .links2 a {
+            text-decoration: none;                /* Heq linjat nga lidhjet */
+            color: hotpink;                       /* Ngjyra e tekstit */
+            font-size: 35px;                      /* Madhësia e tekstit */
+            padding: 10px;                        /* Hapësirë rreth lidhjes */
+            font-weight: bold;                    /* Tekst i theksuar */
+        }
+        .links2 a:hover {
+            color: black;                        /* Ndryshon ngjyrën kur kalon mbi lidhjen */
+        }
+
+        /* Pjesa e përmbajtjes që shfaqet kur klikohet një lidhje */
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            display: none;                       /* E fsheh fillimisht */
+            font-size: 25px;
+            scroll-margin-top: 120px;            /* Hapësirë për navigimin fiks */ 
+        }
+        /* Pjesa që shfaqet pas klikimit */
+        .active {
+            display: block;
+        }
+
+img.small1 {
+    width: 100%;                        /* Përdor përmasat që janë të përshtatshme për kontejnerin */
+    height: 460px;                      /* Lartësia e dëshiruar */
+    object-fit: cover;                  /* Bën që fotoja të mbulojë hapësirën pa deformuar */
+    object-position: center;            /* Poziciono foton në qendër nëse ka hapësirë të mbetur */
+    border-radius: 20%;
+    transition: box-shadow 0.3s ease;    /* Shtimi i kalimit të butë për hije */
+}
+img.small1:hover {
+    box-shadow: 15px 14px 20px pink;         /* Hija kur mausit kalon mbi foton */
+}
+
+    .table-cell {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="pjesaLogos">
+        <img src="logo.jpg" alt="Logo">
+        <div class="links">
+            <a href="main.html"><p style="font-size: 22px;">HOME</p></a>        <!--stil brenda rreshtit qe rregullon madhesine e shkrimit-->
+            <a href="indexdjem12dj123.html"><p style="font-size: 22px;">BOYS</p></a>
+            <a href="nextlodra.html"><p style="font-size: 22px;">TOYS</p></a>
+        </div>
+    </div>
+
+<table>
+    <tr>
+        <td><img src="roz.jpeg" alt="Fustan" class="small"></td>
+        <td rowspan="5"><img src="shume.jpeg" alt="Fustan" class="middle"></td>
+        <td class="highlight" class="shkrimet">Fustan me xixa</td>
+    </tr>
+    <tr>
+    <td rowspan="2"><img src="roze.jpeg" alt="Fustan" class="small"></td>
+    <td class="cmim"><a href="#bottom" >Shiko përshkrimin e produktit</a></td>
+    </tr>
+    <tr>
+        <td class="cmim"><del>Lek 13,000.00 ALL</del> <br> <ins> Lek 9000.00 ALL </ins> <br> <small><i>Taksat e përfshira</i></small></td>
+    </tr>
+    <tr>
+        <td><img src="rozee.jpeg" alt="Fustan" class="small"></td>
+        <td class="shkrimet">Ngjyrat
+<br>
+            <form>
+                <select name="ngjyrat">
+                    <option value="kuqe">Rozë</option>
+                    <option value="bardhe">Jeshile</option>
+                    <option value="zeze">Lejla</option>
+                    <option value="zeze">E verdhë</option>
+                </select>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="rozeee.jpeg" alt="Paris" class="small"></td>
+        <td class="shkrimet">Masat
+<br>
+            <form>
+                <select name="masat">
+                    <option value="1">105 cm</option>
+                    <option value="2">110 cm</option>
+                    <option value="3">115 cm</option>
+                    <option value="4">120 cm</option>
+                    <option value="5">125 cm</option>
+                </select>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<hr>
+
+
+<fieldset class="ulje">
+    <legend>ULJE!!! NXITONI!</legend>
+   
+    <p id="countdown"></p>
+    <script>
+        var countDownDate = new Date("Jan 24, 2025 00:00:00").getTime();
+
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));                   <!--1000 milisekonda=1 sekondë, math.floor rrumbullakos në numrin më të ulët-->
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Koha ka kaluar!";
+            }
+        }, 1000);          <!--Ky funksion do të ekzekutojë funksionin çdo sekondë (pra çdo1000 milisekonda).-->
+    </script>
+</fieldset>
+<br>
+
+
+<!-- Drejtkëndëshi me butonin BLIJE TANI -->
+<div class="buy-button-container">
+    <a href="Faqjakryesore1.html"><pre>         BLIJE TANI         </pre></a>
+</div>
+
+
+<br>
+<br>
+<br>
+<hr>
+
+
+<a id="bottom"></a>
+    <div class="links2">
+        <a href="#pershkrimi" onclick="showContent('pershkrimi')">Përshkrimi i produktit</a>        <!--pershkrimi eshte id ne kete rast-->
+        <a href="#info" onclick="showContent('info')">Informacione shtesë</a> 
+        <a href="#transporti" onclick="showContent('transporti')">Transporti dhe Kthimet</a>
+    </div>
+
+    <div id="pershkrimi" class="content">
+    <h2>Përshkrimi i produktit</h2>
+    <p>Fustan me xixa shumëngjyrëshe. Ky fustan është pjesë e koleksionit të 8<sup>të</sup> së pranverës 2024. Vjen me fjongo të madhe në pjesën mbrapa dhe ka cilësi fantastike. Përshtatet për mosha të ndryshme, për fëmijë nga 5-12<sub>vjeç</sub>. Vjen në masat: <abbr title="Small">S</abbr>, <abbr title="Medium">M</abbr>, <abbr title="Large">L</abbr>, <abbr title="Extra Large">XL</abbr> dhe <abbr title="Two Extra Large">2XL</abbr>. Është perfekt për raste speciale.</p>
+    </div>
+
+    <div id="info" class="content">
+        <h2>Informacione shtesë</h2>
+        <p>Veçoritë e fustanit: </p>
+<ol type="A">
+<li>Materiali i fustanit është pambuk 80% dhe sintetik 20%.</li>
+<li>Tipi i këtij fustani është jo minimalist, me krahë të gjatë të tejdukshëm dhe me gjatësi mesatare.</li>
+<li>Fustani pastrohet mjaft lehtë, me gradacion maksimumal deri në 40 gradë.</li>
+</ol>
+    </div>
+
+    <div id="transporti" class="content">
+        <h2>Transporti dhe Kthimet</h2>
+<p>
+Transporti kushton: 300 lekë. Ju mund të ndërroni masë në rast se produkti nuk ju bën, ose ndërrime për arsye të tjera objektive që vlerësohen rast pas rasti nga stafi.
+Produkti që kthehet duhet të jetë me etiketë, me paketimin fillestar, dhe i paveshur nga klienti. Nuk parashikohet kthim i produktit në rast se produkti dëmtohet pasi është përdorur nga klienti.
+<br>
+<br>
+AFATI:
+Ndërrimet mundësohen brenda 24 orëve nga tërheqja e porosisë nga klienti (dhe brenda 3 ditëve nga nisja e porosisë nga ne). Të dy kushtet duhet të plotësohen.
+Për Kosovën dhe të gjitha porositë e tjera jashtë Shqipërisë, ndërrimet NUK janë të mundura.
+Kthimet cash nuk janë të mundura. 
+Kostot: 400 lekë për Tiranën dhe 600 lekë për qytetet e tjera.
+</p>
+    </div>
+
+    <script>
+                                                                   // Funksioni për të shfaqur përmbajtjen kur klikohet një lidhje
+        function showContent(contentId) {  
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');                <!--Gjurmon të gjithë elementët HTML që kanë klasën .content dhe i heq atyre klasën active-->
+            });
+            var contentToShow = document.getElementById(contentId);
+            contentToShow.classList.add('active');                 //shtohet klasa active
+        }
+    </script>
+
+<br>
+<br>
+
+<hr>
+
+
+<p style="text-align: center; font-size: 40px;"><b>YOU MIGHT ALSO LIKE:</b></p>
+<table border="0" class="pelqimet">
+  <tr>
+    <td>
+      <a href="fustanMePallto.html" target="blank"><img src="ft1.jpeg" alt="Fustan me pallto" class="small1"></a>
+</td>
+    <td>
+      <a href="FustanMeLule.html" target="blank"><img src="ft2.jpeg" alt="Fustan me lule" class="small1"></a>
+    </td>
+    <td>
+      <a href="FustaniBardhë.html" target="blank"><img src="ft3.jpeg" alt="Fustan i bardhë" class="small1"></a>
+    </td>
+    <td>
+      <a href="FustanBlu.html" target="blank"><img src="ft4.jpeg" alt="Fustan blu" class="small1"></a>
+    </td>
+  </tr>
+<tr>
+    <td class="table-cell"><p><b>Fustan me pallto</b></p><p>Lek 12000.00 ALL</p></td>
+    <td class="table-cell"><p><strong>Fustan me lule</strong></p><p>Lek 1000.00 ALL</p></td>
+    <td class="table-cell"><p><b>Fustan i bardhë</b></p><p>Lek 6999.00 ALL</p></td>
+    <td class="table-cell"><p><strong>Fustan blu</strong></p><p>Lek 4000.00 ALL</p></td>
+</tr>
+</table>
+
+</body>
+</html>

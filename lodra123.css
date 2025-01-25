@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Store</title>
+    <style>
+        /* Stilizimi i logos dhe faqes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #90EE90; /* Ngjyra e lehtë e sfondit */
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #90EE90; 
+            padding: 10px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 60px; /* Lartësia maksimale e logos */
+            margin-right: 10px; /* Hapësirë mes logos dhe tekstit */
+           border-radius:40px;
+        }
+
+        .logo h1 {
+            font-size: 1.8em;
+            color: #333;
+            margin: 0;
+        }
+
+        .footer-logo{
+font-size: 1.8em;
+            color: #333;
+}
+
+
+        h2 {
+            color: #333;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        ul {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0;
+        }
+       
+        
+
+        .lodra {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 500px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #e60023;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
